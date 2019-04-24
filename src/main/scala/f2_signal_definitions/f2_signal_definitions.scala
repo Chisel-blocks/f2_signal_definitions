@@ -1,5 +1,11 @@
 //Consider using "unit" instead of "User" 
 package f2_signal_definitions
+import chisel3._
+import chisel3.util._
+import chisel3.experimental._
+import dsptools._
+import dsptools.numbers._
+
 class usersigs (val n: Int, val users: Int=4) extends Bundle {
     val udata=DspComplex(SInt(n.W), SInt(n.W))
     val uindex=UInt(log2Ceil(users).W)
